@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registro">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="0dp"></View>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrate"
+        android:textColor="@color/md_theme_light_primary"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toTopOf="@+id/view1"
+        ></TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameInputLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/baseline_email_24"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toTopOf="@+id/view1">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textPersonName">
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordInputLogIn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/baseline_key_24"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@id/usernameInputLogin">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="password"
+            android:inputType="textPersonName"></EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/repeatpasswordInputLogIn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/baseline_key_24"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@id/passwordInputLogIn">
+
+        <EditText
+            android:id="@+id/repiteContrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Repeat password"
+            android:inputType="textPersonName"
+            ></EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameInputLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/baseline_person_24"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@id/repeatpasswordInputLogIn">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textPersonName">
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/Aceptar"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Aceptar"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/white"
+        android:background="@drawable/noradius"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@id/nameInputLogin"
+        app:layout_constraintBottom_toBottomOf="@id/view1"
+        />
+
+    <TextView
+        android:id="@+id/cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:textColor="@color/md_theme_light_primary"
+        android:textSize="15dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toTopOf="@id/Aceptar"
+        app:layout_constraintBottom_toBottomOf="@id/view1"
+        android:onClick="goMain"
+        ></TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"></ImageView>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#D5FFFFFF">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/logoFord"
+        android:layout_width="80dp"
+        android:layout_height="800dp"
+        android:src="@drawable/piladelibros"
+        app:layout_constraintBottom_toTopOf="@+id/usernameInputLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/frame" />
+
+    <Button
+        android:id="@+id/Enviar"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/noradius"
+        android:text="Acceder"
+        android:onClick="goTabs"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/frame"
+        app:layout_constraintStart_toStartOf="@id/frame"
+        app:layout_constraintTop_toTopOf="@id/guiaButtonLog"
+
+        />
+
+    <Button
+        android:id="@+id/Registrarse"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="Registrarse"
+        android:textColor="@color/white"
+        android:layout_marginTop="0dp"
+        android:onClick="changeToMain"
+        android:background="@drawable/noradius"
+        app:layout_constraintTop_toTopOf="@id/Enviar"
+        app:layout_constraintBottom_toBottomOf="@id/frame"
+        app:layout_constraintEnd_toEndOf="@id/frame"
+        app:layout_constraintStart_toStartOf="@id/frame" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameInputLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/guiaUser"
+        app:layout_constraintStart_toStartOf="@id/frame"
+        app:layout_constraintEnd_toEndOf="@id/frame"
+        app:startIconDrawable="@drawable/baseline_person_24">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="username"
+            android:inputType="textPersonName">
+            android:background="@drawable/noradius"
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordInputLogIn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/usernameInputLogin"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toStartOf="@id/frame"
+        app:layout_constraintEnd_toEndOf="@id/frame"
+        app:startIconDrawable="@drawable/baseline_key_24">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="password"
+            android:inputType="textPersonName">
+            android:background="@drawable/noradius"
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaButtonLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.62" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaRecuedame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.24087591" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
